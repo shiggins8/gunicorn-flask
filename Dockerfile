@@ -1,7 +1,7 @@
 # gunicorn-flask
 
 FROM ubuntu:12.04
-MAINTAINER Daniel Riti <dmriti@gmail.com>
+MAINTAINER Scott Higgins <scott.higgins@gatech.edu>
 
 ENV DEBIAN_FRONTEND noninteractive
 

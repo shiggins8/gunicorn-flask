@@ -11,26 +11,16 @@ Gunicorn + Flask.
 
 1. Install [Docker](https://www.docker.com/).
 
-2. Download [automated build](https://registry.hub.docker.com/u/danriti/gunicorn-flask/) from public [Docker Hub Registry](https://registry.hub.docker.com/):
+2. Download [automated build](https://registry.hub.docker.com/u/shiggins8/gunicorn-flask/) from public [Docker Hub Registry](https://registry.hub.docker.com/):
 
 ```bash
-docker pull danriti/gunicorn-flask
+docker pull shiggins8/gunicorn-flask
 ```
 
 ### Docker Usage
 
 ```bash
-docker run -d -P danriti/gunicorn-flask
+docker run --name my-website -d -p 5000:5000 shiggins8/gunicorn-flask
 ```
 
-After few seconds, open `http://<host>:<port>` to see the Flask app.
-
-### Marathon Usage
-
-```bash
-curl -X POST -H "Content-Type: application/json" http://<master>:<port>/v2/apps -d@marathon.json
-```
-
-Replace `<master>` and `<port>` with the IP address and port of your [Marathon][1] host.
-
-[1]: https://mesosphere.github.io/marathon/
+After few seconds, open `http://<host>:5000` to see the Flask app.
